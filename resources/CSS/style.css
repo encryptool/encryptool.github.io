@@ -229,11 +229,11 @@ header {
 	opacity:.5;
 	background:none;
 }
-header.header-mobile #mainmenu > li ul.mega{
+header.navbar #mainmenu > li ul.mega{
 	visibility: visible;
 	opacity: 1;
 }
-header:not(.header-mobile) #mainmenu > li:hover ul.mega{
+header:not(.navbar) #mainmenu > li:hover ul.mega{
 	height:auto;
 }
 
@@ -306,13 +306,13 @@ footer a:hover {
 	padding: 20px 0 20px 0;
 }
 
-header.header-mobile {
+header.navbar {
 	position:fixed;
 	height: 70px;
 	background: rgba(64, 65, 70, 70%);
 	top:0;
 }
-header.header-mobile nav{
+header.navbar nav{
 	float:none;
 	height: 70px;
 }
@@ -647,7 +647,7 @@ p {
 .center-y {
 	position: relative;
 }
-.overlay-bg {
+.overlay-gradient {
 	width: 100%;
 	height: 100%;
 	z-index: 100;
@@ -656,12 +656,12 @@ p {
 	padding:100px 0 100px 0;
 }
 
-.overlay-bg.t0{
+.overlay-gradient.t0{
 	background: rgb(255,25,55);
 	background: linear-gradient(63deg, rgba(255,25,55,0.3) 0%, rgba(248,59,255,0.2) 9%, rgba(96,112,237,0.1) 33%, rgba(156,244,254,0.1) 61%, rgba(119,204,243,0.1) 74%, rgba(255,173,53,0.2) 91%, rgba(255,156,0,0.3) 100%);
 }
 
-.full-height .overlay-bg {
+.full-height .overlay-gradient {
 	display: table;
 }
 
@@ -1482,7 +1482,7 @@ a, img {
 	header.autoshow #mainmenu li a {
 		background: none;
 	}
-	header.header-mobile-sticky {
+	header.navbar {
 		position: fixed;
 	}
 	#subheader, {
@@ -1609,107 +1609,107 @@ a, img {
 	#mainmenu li li a:hover {
 		color: #fff;
 	}
-	header.header-mobile{
+	header.navbar{
 		overflow:hidden;
 		position:relative;
 	}
-	header.header-mobile #mainmenu {
+	header.navbar #mainmenu {
 		float: none;
 		z-index: 200;
 		width: 100%;
 		margin: 0;
 		padding: 0;
 	}
-	header.header-mobile #mainmenu a {
+	header.navbar #mainmenu a {
 		text-align: left;
 		padding-top: 10px;
 		padding-bottom: 10px;
 	}
-	header.header-mobile #mainmenu a:hover {
+	header.navbar #mainmenu a:hover {
 		background: none;
 	}
-	header.header-mobile #mainmenu li ul {
+	header.navbar #mainmenu li ul {
 		display: block;
 		position: inherit;
 		margin: 0;
 		width: 100%;
 	}
-	header.header-mobile #mainmenu li {
+	header.navbar #mainmenu li {
 		border-bottom: solid 1px #eee;;
 		margin: 0;
 		width: 100%;
 		display: block;
 	}
-	header.header-light.header-mobile #mainmenu li, header.header-light.header-mobile #mainmenu li ul li a {
+	header.header-light.navbar #mainmenu li, header.header-light.navbar #mainmenu li ul li a {
 		border-color: #eee;
 	}
-	header.header-dark.header-mobile{
+	header.header-dark.navbar{
 		background:#222;
 	}
-	header.header-dark.header-mobile #mainmenu li{
+	header.header-dark.navbar #mainmenu li{
 		border-color: #333;
 	}
-	header.header-dark.header-mobile #mainmenu li a{
+	header.header-dark.navbar #mainmenu li a{
 		color:#fff;
 	}
-	header.header-mobile #mainmenu li a:after {
+	header.navbar #mainmenu li a:after {
 		display: none;
 	}
-	header.header-mobile #mainmenu li:last-child {
+	header.navbar #mainmenu li:last-child {
 		margin-bottom: 30px;
 	}
-	header.header-mobile #mainmenu li ul {
+	header.navbar #mainmenu li ul {
 		border-top: none;
 		top: auto;
 	}
-	header.header-mobile #mainmenu li ul a {
+	header.navbar #mainmenu li ul a {
 		width: 100%;
 		background: none;
 		border: none;
 	}
-	header.header-mobile #mainmenu li ul li {
+	header.navbar #mainmenu li ul li {
 		border: none;
 		padding-left: 40px;
 	}
 	header #mainmenu li ul li:first-child {
 		border-top: solid 1px #eee;
 	}
-	header.header-mobile #mainmenu li ul li a {
+	header.navbar #mainmenu li ul li a {
 		display: block;
 		border-bottom: solid 1px #eee;
 	}
-	header.header-mobile #mainmenu li ul li:last-child {
+	header.navbar #mainmenu li ul li:last-child {
 		border-bottom: none;
 		margin: 0;
 	}
-	header.header-mobile #mainmenu li ul li:last-child a {
+	header.navbar #mainmenu li ul li:last-child a {
 		border-bottom: none;
 	}
-	header.header-mobile #mainmenu li a {
+	header.navbar #mainmenu li a {
 		color: #888;
 	}
-	header.header-mobile #mainmenu li a:hover {
+	header.navbar #mainmenu li a:hover {
 		color: #333;
 	}
-	header.header-mobile #mainmenu li li a {
+	header.navbar #mainmenu li li a {
 		font-size: 12px;
 	}
-	header.header-mobile #mainmenu li li a:hover {
+	header.navbar #mainmenu li li a:hover {
 		color: #888;
 	}
-	header.header-mobile #mainmenu li ul {
+	header.navbar #mainmenu li ul {
 		height: 0;
 		overflow: hidden;
 		position: relative;
 		left: 0;
 	}
-	header.header-mobile #mainmenu li ul li ul li:last-child {
+	header.navbar #mainmenu li ul li ul li:last-child {
 		border-bottom: solid 1px #eee;
 	}
-	header.header-mobile #mainmenu li ul li ul {
+	header.navbar #mainmenu li ul li ul {
 		margin-bottom: 10px;
 	}
-	header.header-mobile #mainmenu>li>span {
+	header.navbar #mainmenu>li>span {
 		width: 36px;
 		height: 36px;
 		position: absolute;
@@ -1718,10 +1718,10 @@ a, img {
 		z-index: 1000;
 		cursor: pointer;
 	}
-	header.header-mobile #mainmenu li span.active {
+	header.navbar #mainmenu li span.active {
 		background: url(../images/ui/arrow-up.png) center no-repeat;
 	}
-	header.header-mobile #mainmenu li>ul>li>span {
+	header.navbar #mainmenu li>ul>li>span {
 		width: 36px;
 		height: 36px;
 		position: absolute;
@@ -1730,17 +1730,17 @@ a, img {
 		z-index: 1000;
 		cursor: pointer;
 	}
-	header.header-mobile #mainmenu>li>ul>li>span.active {
+	header.navbar #mainmenu>li>ul>li>span.active {
 		background: url(../images/ui/arrow-up.png) center no-repeat;
 	}
-	header.header-mobile #mainmenu li ul li a {
+	header.navbar #mainmenu li ul li a {
 		border-bottom: solid 1px #eee;
 	}
-	header.header-mobile #mainmenu li ul li:last-child>a {
+	header.navbar #mainmenu li ul li:last-child>a {
 		border-bottom: none;
 	}
 
-	header.header-light.header-mobile #mainmenu>li>span.active, header.header-light.header-mobile #mainmenu li>ul>li>span.active {
+	header.header-light.navbar #mainmenu>li>span.active, header.header-light.navbar #mainmenu li>ul>li>span.active {
 		background: url(../images/ui/arrow-up.png) center no-repeat;
 	}
 	/* header light */
@@ -1748,7 +1748,7 @@ a, img {
 		color: #333;
 	}
 
-	header.header-mobile #mainmenu li ul.mega ul {
+	header.navbar #mainmenu li ul.mega ul {
 		height: auto;
 	}
 
@@ -1782,18 +1782,18 @@ a, img {
 		padding:0px;
 	}
 
-	header.header-mobile #mainmenu ul.mega li{
+	header.navbar #mainmenu ul.mega li{
 		border-bottom:solid 1px #eee;
 		padding-left:0 !important;
 	}
 
-	header.header-mobile #mainmenu ul.mega li.title{
+	header.navbar #mainmenu ul.mega li.title{
 		color:#777;
 		padding-top:12px;
 		border-bottom:solid 1px #eee !important;
 	}
 
-	header.header-mobile #mainmenu ul.mega li:first-child{
+	header.navbar #mainmenu ul.mega li:first-child{
 		border-top:none;
 	}
 
@@ -1883,7 +1883,7 @@ a, img {
 		color:#333333;
 	}
 }
-#subheader .overlay-bg{
+#subheader .overlay-gradient{
 	padding:40px 0 40px 0;
 }
 #subheader h1{
@@ -1905,7 +1905,7 @@ line-height:10vw;
 
 @media only screen and (max-width: 767px) {
 
-	#subheader .overlay-bg{
+	#subheader .overlay-gradient{
 		padding:40px 0 40px 0;
 	}
 	#subheader h1{

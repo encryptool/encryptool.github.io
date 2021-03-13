@@ -1,17 +1,6 @@
 
-#section-hero {background:"black" fixed;}
-#section-hero-2 {background:url(../images/background/bg1.jpeg) top;}
-#section-hero-3 {background:url(../images/background/bg2.jpeg) fixed;}
-
-body.custom-bg-1{background:url(../images/background/none.jpg);
--moz-background-size: cover;
-    -webkit-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    background-position:center center;
-    background-attachment:fixed;
-}
-
+#section-picture {background:url(../images/background/bg1.jpeg) fixed;}
+#section-picture-2 {background:url(../images/background/bg2.jpeg) fixed;}
 
 @media only screen and (min-device-width: 768) and (max-device-width: 1024) and (orientation: portrait){
 	section{
