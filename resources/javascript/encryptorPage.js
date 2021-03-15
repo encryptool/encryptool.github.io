@@ -1,17 +1,14 @@
 window.addEventListener("scroll", function(){
   var navbar = document.getElementById('navbar')
   var logo = document.getElementById('logo')
-  if(window.scrollY>=50){
+
+  if (window.scrollY>=305) {
+    logo.classList.add('toggle')
     navbar.classList.add('toggle')
   }
   else {
-    navbar.classList.remove('toggle')
-  }
-  if (window.scrollY>=301) {
-    logo.classList.add('toggle')
-  }
-  else {
     logo.classList.remove('toggle')
+    navbar.classList.remove('toggle')
   }
 });
 
