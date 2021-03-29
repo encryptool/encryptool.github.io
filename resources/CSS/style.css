@@ -236,14 +236,16 @@ header:not(.navbar) #mainmenu > li:hover ul.mega{
 #content {
 	width: 100%;
 	background: #fff;
-	padding: 90px 0 90px 0;
+	padding: 300px 0 90px 0;
 	z-index: 100;
+
 }
 .de_light #content {
 	background: #ffffff;
 }
 #content {
 	background: #18191b;
+
 }
 
 
@@ -252,6 +254,7 @@ section {
 	overflow: hidden;
 	position: relative;
 	background: #18191b;
+	height: 100vh;
 }
 section#index-section-quote {
 	height: 100vh;
@@ -300,6 +303,8 @@ header.navbar {
 	height: 70px;
 	background: rgba(64, 65, 70, 50%);
 	top:0;
+	padding-left: 10%;
+	padding-right: 10%;
 }
 .navbar.toggle {
 	background: rgba(64, 65, 70, 100%) !important;
@@ -1439,7 +1444,7 @@ a, img {
 	}
 	header.navbar{
 		overflow:hidden;
-		position:relative;
+		position: relative;
 	}
 	header.navbar #mainmenu {
 		float: none;
@@ -1645,11 +1650,24 @@ a, img {
 #subheader h1{
 	font-size: 36px;
 }
+
+
 .container {
 	padding-left: 30px;
 	padding-right: 30px;
 	vertical-align: middle;
+	position: relative;
 }
+
+.container2 {
+	top: 20%;
+	left: 15%;
+	vertical-align: middle;
+	position: relative;
+}
+
+
+
 h1.big, h1_big{
 font-size:8vw;
 line-height:10vw;
