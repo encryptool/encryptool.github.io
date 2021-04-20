@@ -4,14 +4,14 @@
   <head>
     <meta charset="utf-8">
     <title>Encryptool</title>
-    <link rel="icon" href="resources/images/logo.jpeg">
+    <link rel="icon" href="../resources/images/logo.jpeg">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="resources/CSS/bootstrap.css" type="text/css">
-    <link rel="stylesheet" href="resources/CSS/animate.css" type="text/css">
-    <link rel="stylesheet" href="resources/CSS/style.css" type="text/css">
-    <link rel="stylesheet" href="resources/CSS/bg.css" type="text/css">
-    <link rel="stylesheet" id="colors" href="resources/CSS/colors/orange.css" type="text/css">
+    <link rel="stylesheet" href="../resources/CSS/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="../resources/CSS/animate.css" type="text/css">
+    <link rel="stylesheet" href="../resources/CSS/style.css" type="text/css">
+    <link rel="stylesheet" href="../resources/CSS/bg.css" type="text/css">
+    <link rel="stylesheet" id="colors" href="../resources/CSS/colors/orange.css" type="text/css">
   </head>
 
   <body id="homepage" class="de_light" style="display: block;" data-new-gr-c-s-check-loaded="14.998.0" data-gr-ext-installed="">
@@ -22,13 +22,13 @@
       <div class="container" style="background-size: cover;">
           <div style="background-size: cover;">
             <nav>
-              <a href="index.html"><h1 id="logo" class="logo" style="padding-top: 8px;float:left;transition: 0.25s;">Encryp<span class="id-color">Tool.</span></h1></a>
+              <a href="../index.html"><h1 id="logo" class="logo" style="padding-top: 8px;float:left;margin-left:25px;">Encryp<span class="id-color">Tool.</span></h1></a>
               <ul id="mainmenu" class="no-separator">
-                <li><a href="index.html">Home<span></span></a><span></span></li>
+                <li><a href="../index.html">Home<span></span></a><span></span></li>
                 <li><a href="#">Tools<span></span></a><span></span>
                   <ul>
-                    <li><a href="hasher.html">Password Hasher</a></li>
-                    <li><a href="encryptor.html">Text Encryptor</a></li>
+                    <li><a href="index.html">Password Hasher</a></li>
+                    <li><a href="../encrypt/index.html">Text Encryptor</a></li>
                   </ul>
                 </li>
                 <li><a href="#">Project<span></span></a><span></span>
@@ -55,19 +55,19 @@
     <div id="content" class="no-bottom no-top" style="background-size: cover;">
 
       <!-- section 1 start -->
-      <section id="encryptor-section-picture" class="full-height relative no-top no-bottom text-light" style="height: 100vh; background-size: cover;">
+      <section id="hasher-section-picture" class="full-height relative no-top no-bottom text-light" style="height: 100vh; background-size: cover;">
 
         <div class="overlay-gradient t0" style="background-size: cover;">
           <div class="center-y relative" data-scroll-speed="4" style="background-size: cover;">
             <div class="container" style="background-size: cover;">
                 <div class="col-md-8" style="background-size: cover;">
                   <div class="mask" style="background-size: cover;">
-                    <h1 id="encryptool" class="wow fadeInUp big animated" style="visibility: visible; animation-name: fadeInUp;">Encryptor<span class="id-color">Tool.</span></h1>
+                    <h1 id="encryptool" class="wow fadeInUp big animated" style="visibility: visible; animation-name: fadeInUp;">Hasher<span class="id-color">Tool.</span></h1>
                   </div>
                 </div>
                 <div class="col-md-6" style="background-size: cover;">
                   <div class="spacer-half" style="background-size: cover;"></div>
-                  <a href="#index-section-quote" class="wow fadeInUp btn btn-custom animated" data-wow-delay="0.8s" style="visibility: visible; animation-delay: 0.8s; animation-name: fadeInUp;">Read More</a>
+                  <a href="#main" class="wow fadeInUp btn btn-custom animated" data-wow-delay="0.8s" style="visibility: visible; animation-delay: 0.8s; animation-name: fadeInUp;">Get Started</a>
                 </div>
             </div>
           </div>
@@ -75,6 +75,28 @@
       </section>
       <!-- section 1 close -->
 
+      <!-- section 2 start -->
+      <section class="no-top no-bottom" id="index-section-picture-3" style="height: 100vh;">
+        <div class="row">
+          <div class="column3">
+            <h1 id="main" class="h1_big">SHA256</h1>
+            <textarea class="input" id="input" oninput="autohash()" placeholder="Plaintext"></textarea>
+            <br>
+            <div class="row">
+              <button class="button btn btn-custom" onclick="hash()">Submit</button>
+              <button class="button btn btn-custom" onclick="toggle()" id="au">Auto-update</button>
+            </div>
+            <br>
+            <p id="output"></p>
+          </div>
+          <div class="column4">
+            <h1>Content...</h1>
+            <p></p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+        </div>
+      </section>
+      <!-- section 2 close -->
 
     </div>
     <!-- content close -->
@@ -95,8 +117,8 @@
               <h5>Contact</h5>
               <div class="tiny-border" style="background-size: cover;"><span></span></div>
               <ul>
-                <li><a href="https://www.instagram.com/k3nzie.m/?hl=en"><img style="padding:10px;margin: 0 20px 0px 20px;width:70px;"src="resources/images/instagram.png" alt="instagram"></img>Instagram</a></li>
-                <li><a href="https://github.com/mackenzielo"><img style="padding:10px;margin: 0 20px 0px 20px;border-radius:50%; width:70px;"src="resources/images/github.png" alt="github"></img>Github</a></li>
+                <li><a href="https://www.instagram.com/k3nzie.m/?hl=en"><img style="padding:10px;margin: 0 20px 0px 20px;width:70px;"src="../resources/images/instagram.png" alt="instagram"></img>Instagram</a></li>
+                <li><a href="https://github.com/mackenzielo"><img style="padding:10px;margin: 0 20px 0px 20px;border-radius:50%; width:70px;"src="../resources/images/github.png" alt="github"></img>Github</a></li>
                 <li><p>Phone number: +44 07759 183935</p></li>
                 <li><p>Email: MackenzieLMoore@outlook.com</p></li>
               </ul>
@@ -121,8 +143,25 @@
     </footer>
     <!-- footer close -->
 
+    <script src="../resources/javascript/functions.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script>
+    <script>
 
-    <script src="resources/javascript/encryptorPage.js"></script>
-
+        function hash() {
+          var input = document.getElementById("input").value
+          var hash = CryptoJS.SHA256(input).toString();
+          if (input.length > 0) {
+            document.getElementById("output").innerHTML = hash;
+          }
+          else {
+            document.getElementById("output").innerHTML = "";
+          }
+        }
+        function autohash() {
+          if (document.getElementById("au").classList.contains('off') == false) {
+            hash()
+          }
+        }
+    </script>
   </body>
 </html>
