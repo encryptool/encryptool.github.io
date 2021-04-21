@@ -27,8 +27,8 @@
                 <li><a href="../index.html">Home<span></span></a><span></span></li>
                 <li><a href="#">Tools<span></span></a><span></span>
                   <ul>
-                    <li><a href="index.html">Password Hasher</a></li>
-                    <li><a href="../encrypt/index.html">Text Encryptor</a></li>
+                    <li><a href="index.html">Hashing</a></li>
+                    <li><a href="../encrypt/index.html">Encryption</a></li>
                   </ul>
                 </li>
                 <li><a href="#">Project<span></span></a><span></span>
@@ -87,7 +87,10 @@
               <button class="button btn btn-custom" onclick="toggle()" id="au">Auto-update</button>
             </div>
             <br>
-            <p id="output"></p>
+            <div class="output">
+              <p id="output"></p>
+              <p id="output2"></p>
+            </div>
           </div>
           <div class="column4">
             <h1>Content...</h1>
@@ -147,21 +150,24 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script>
     <script>
 
-        function hash() {
-          var input = document.getElementById("input").value
-          var hash = CryptoJS.SHA256(input).toString();
-          if (input.length > 0) {
-            document.getElementById("output").innerHTML = hash;
-          }
-          else {
-            document.getElementById("output").innerHTML = "";
-          }
+      function hash() {
+        var start = window.performance.now();
+        var input = document.getElementById("input").value
+        var hash = CryptoJS.SHA256(input).toString();
+        if (input.length > 0) {
+          document.getElementById("output").innerHTML = hash;
+          document.getElementById("output2").innerHTML = window.performance.now() - start;
         }
-        function autohash() {
-          if (document.getElementById("au").classList.contains('off') == false) {
-            hash()
-          }
+        else {
+          document.getElementById("output").innerHTML = "";
+          document.getElementById("output2").innerHTML = "";
         }
+      }
+      function autohash() {
+        if (document.getElementById("au").classList.contains('off') == false) {
+          hash()
+        }
+      }
     </script>
   </body>
 </html>
