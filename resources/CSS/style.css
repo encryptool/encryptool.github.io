@@ -274,6 +274,14 @@ section#index-section-quote {
 	z-index: 1;
 }
 
+section#index-section-options {
+	height: 50vh;
+	width: 100%;
+	display: table;
+	padding: 0;
+	box-shadow: 0 0 30px rgba(15,15,15,0.6);
+	z-index: 1;
+}
 
 .de_light section {
 	background: #ffffff;
@@ -284,6 +292,20 @@ section#index-section-quote {
 	width: 100%;
 	padding: 0;
 	justify-content: center;
+}
+
+.row#options {
+	display:table;
+	height:inherit;
+	padding:0 10% 0 10%;
+	text-align:center;
+}
+
+.row#options ul {
+	display: table-cell;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
 }
 
 .column1.text-white {
@@ -307,7 +329,7 @@ section#index-section-quote {
 .column3 {
 	flex: 50%;
 	padding: 20px;
-	height: 100vh;
+	height: inherit;
 	text-align: center;
 }
 
@@ -316,7 +338,7 @@ section#index-section-quote {
 	padding: 20px;
 	background: black;
 	opacity: 0.5;
-	height: 100vh;
+	height: inherit;
 	border-radius: 20px 0 0 20px;
 	box-shadow: 0 0 15px 8px black;
 }
@@ -359,7 +381,6 @@ textarea {
 	background: #823727 !important;
 	color: #bbb !important;
 }
-
 
 
 footer {
@@ -408,11 +429,6 @@ header.navbar {
 	visibility: hidden;
 	opacity: 0;
 	color: #fff;
-}
-
-header.navbar nav{
-	float:none;
-	height: 70px;
 }
 
 
@@ -1112,8 +1128,9 @@ a, img {
 	header.autoshow #mainmenu li a {
 		background: none;
 	}
-#navbar.navbar {
+	.navbar #navbar{
 		position: fixed;
+		height: 10vh !important;
 	}
 	#subheader, {
 		padding: 0 0 0 0;
@@ -1462,7 +1479,9 @@ a, img {
 	position: relative;
 }
 
-
+.t1 {
+	text-align: center;
+}
 
 h1.big, h1_big{
 font-size:8vw;
