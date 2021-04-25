@@ -22,13 +22,13 @@
       <div class="container" style="background-size: cover;">
           <div style="background-size: cover;">
             <nav>
-              <a href="index.html"><h1 id="logo" class="logo" style="padding-top: 8px;float:left;margin-left:25px;">Encryp<span class="id-color">Tool.</span></h1></a>
+              <a href="../index.html"><h1 id="logo" class="logo" style="padding-top: 8px;float:left;margin-left:25px;">Encryp<span class="id-color">Tool.</span></h1></a>
               <ul id="mainmenu" class="no-separator">
                 <li><a href="../index.html">Home<span></span></a><span></span></li>
                 <li><a href="#">Tools<span></span></a><span></span>
                   <ul>
-                    <li><a href="../hash/index.html">Hashing</a></li>
-                    <li><a href="index.html">Encryption</a></li>
+                    <li><a href="index.html">Hashing</a></li>
+                    <li><a href="../encrypt/index.html">Encryption</a></li>
                   </ul>
                 </li>
                 <li><a href="#">Project<span></span></a><span></span>
@@ -55,14 +55,14 @@
     <div id="content" class="no-bottom no-top" style="background-size: cover;">
 
       <!-- section 1 start -->
-      <section id="encryptor-section-picture" class="full-height relative no-top no-bottom text-light" style="height: 100vh; background-size: cover;">
+      <section id="hasher-section-picture" class="full-height relative no-top no-bottom text-light" style="height: 100vh; background-size: cover;">
 
         <div class="overlay-gradient t0" style="background-size: cover;">
           <div class="center-y relative" data-scroll-speed="4" style="background-size: cover;">
             <div class="container" style="background-size: cover;">
                 <div class="col-md-8" style="background-size: cover;">
                   <div class="mask" style="background-size: cover;">
-                    <h1 id="encryptool" class="wow fadeInUp big animated" style="visibility: visible; animation-name: fadeInUp;">Encryptor<span class="id-color">Tool.</span></h1>
+                    <h1 id="encryptool" class="wow fadeInUp big animated" style="visibility: visible; animation-name: fadeInUp;">Hasher<span class="id-color">Tool.</span></h1>
                   </div>
                 </div>
                 <div class="col-md-6" style="background-size: cover;">
@@ -77,17 +77,20 @@
 
       <!-- section 2 start -->
       <section class="no-top no-bottom" id="index-section-picture-3" style="height: 100vh;">
-        <div class="row">
+        <div class="row" style="height: 100vh;">
           <div class="column3">
-            <h1 id="main" class="h1_big">#algorithm</h1>
-            <textarea class="input" id="input" oninput="autoencrypt()" placeholder="Plaintext"></textarea>
+            <h1 id="main" class="h1_big">MD5</h1>
+            <textarea class="input" id="input" oninput="autohash()" placeholder="Plaintext"></textarea>
             <br>
             <div class="row">
-              <button class="button btn btn-custom" onclick="encrypt()">Submit</button>
+              <button class="button btn btn-custom" onclick="hash()">Submit</button>
               <button class="button btn btn-custom" onclick="toggle()" id="au">Auto-update</button>
             </div>
             <br>
-            <p id="output"></p>
+            <div class="output">
+              <p id="output"></p>
+              <p id="output2"></p>
+            </div>
           </div>
           <div class="column4">
             <h1>Content...</h1>
@@ -97,7 +100,6 @@
         </div>
       </section>
       <!-- section 2 close -->
-
 
     </div>
     <!-- content close -->
@@ -143,19 +145,28 @@
     </footer>
     <!-- footer close -->
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script>
     <script src="../resources/javascript/functions.js"></script>
-    <script type="text/javascript">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script>
+    <script>
 
-      function encrypt() {
+      function hash() {
+        var start = window.performance.now();
         var input = document.getElementById("input").value
+        var hash = CryptoJS.MD5(input).toString();
+        if (input.length > 0) {
+          document.getElementById("output").innerHTML = hash;
+          document.getElementById("output2").innerHTML = window.performance.now() - start;
+        }
+        else {
+          document.getElementById("output").innerHTML = "";
+          document.getElementById("output2").innerHTML = "";
+        }
       }
-      function autoencrypt() {
+      function autohash() {
         if (document.getElementById("au").classList.contains('off') == false) {
-          encrypt()
+          hash()
         }
       }
     </script>
-
   </body>
 </html>
