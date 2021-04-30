@@ -299,7 +299,7 @@ section#index-section-options {
 	display: table;
 	padding: 0;
 	box-shadow: 0 0 30px rgba(15,15,15,0.6);
-	z-index: 1;
+	z-index: 2;
 }
 
 section#encryptor-section-picture {
@@ -307,7 +307,7 @@ section#encryptor-section-picture {
 	z-index: 2;
 }
 
-section#encryption-info {
+section#instructions {
 	height: 60vh;
 	width: 100vw;
 	z-index: 2;
@@ -316,6 +316,17 @@ section#encryption-info {
 }
 
 #encryption-info-picture {
+	height: inherit;
+	position: absolute;
+	top: 0;
+	left: 0;
+	filter:  opacity(0.5);
+	width: 100%;
+	z-index: -1;
+
+}
+
+#hashing-info-picture {
 	height: inherit;
 	position: absolute;
 	top: 0;
