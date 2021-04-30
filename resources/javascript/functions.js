@@ -14,3 +14,6 @@ window.addEventListener("scroll", function(){
 function toggle() {
   document.getElementById("au").classList.toggle('off')
 }
+function toggle2() {
+  document.getElementById("au2").classList.toggle('off')
+}

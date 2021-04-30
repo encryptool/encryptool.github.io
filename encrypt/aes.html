@@ -22,13 +22,13 @@
       <div class="container" style="background-size: cover;">
           <div style="background-size: cover;">
             <nav>
-              <a href="../index.html"><h1 id="logo" class="logo" style="padding-top: 8px;float:left;margin-left:25px;">Encryp<span class="id-color">Tool.</span></h1></a>
+              <a href="index.html"><h1 id="logo" class="logo" style="float:left;margin-left:25px;">Encryp<span class="id-color">Tool.</span></h1></a>
               <ul id="mainmenu" class="no-separator">
                 <li><a href="../index.html">Home<span></span></a><span></span></li>
                 <li><a href="#">Tools<span></span></a><span></span>
                   <ul>
-                    <li><a href="index.html">Hashing</a></li>
-                    <li><a href="../encrypt/index.html">Encryption</a></li>
+                    <li><a href="../hash/index.html">Hashing</a></li>
+                    <li><a href="index.html">Encryption</a></li>
                   </ul>
                 </li>
                 <li><a href="#">Project<span></span></a><span></span>
@@ -55,14 +55,14 @@
     <div id="content" class="no-bottom no-top" style="background-size: cover;">
 
       <!-- section 1 start -->
-      <section id="hasher-section-picture" class="full-height relative no-top no-bottom text-light" style="height: 100vh; background-size: cover;">
+      <section id="encryptor-section-picture" class="full-height relative no-top no-bottom text-light" style="height: 100vh; background-size: cover;">
 
         <div class="overlay-gradient t0" style="background-size: cover;">
           <div class="center-y relative" data-scroll-speed="4" style="background-size: cover;">
             <div class="container" style="background-size: cover;">
                 <div class="col-md-8" style="background-size: cover;">
                   <div class="mask" style="background-size: cover;">
-                    <h1 id="encryptool" class="wow fadeInUp big animated" style="visibility: visible; animation-name: fadeInUp;">Hasher<span class="id-color">Tool.</span></h1>
+                    <h1 id="encryptool" class="wow fadeInUp big animated" style="visibility: visible; animation-name: fadeInUp;">Encryptor<span class="id-color">Tool.</span></h1>
                   </div>
                 </div>
                 <div class="col-md-6" style="background-size: cover;">
@@ -75,31 +75,66 @@
       </section>
       <!-- section 1 close -->
 
+
       <!-- section 2 start -->
-      <section class="no-top no-bottom" id="index-section-picture-3" style="height: 100vh;">
+      <section class="" id="encryption-info">
+        <div class="no-top no-bottom" id="encryption-info-picture"></div>
+        <div class="row" style="height:inherit;">
+          <div class="column1 text-black">
+            <h1 class="h1_big">Information</h1>
+            <p>The Advanced Encryption Standard (AES) is a U.S. Federal Information Processing Standard (FIPS). It was selected after a 5-year process where 15 competing designs were evaluated.</p>
+          </div>
+          <div class="column6 text-white">
+            <h1 class="h1_big">How to use<span class="id-color">:</span></h1>
+            <p>Firstly, input a key. This will be used in the algorithm to encrypt your plaintext. Next, input an initialisation vector. This is to ensure that, even with the same key, the encryption is never the same, adding to it's security. Finally, add the text you want to encrypt, and there you go!</p>
+            <p>To decrypt, do the same in the decryption section, ensuring that the key and initialisation vector are the same (spaces count as characters!).</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- section 2 close -->
+
+
+      <!-- section 3 start -->
+      <section class="no-top no-bottom" id="index-section-picture-3">
         <div class="row" style="height: 100vh;">
           <div class="column3">
-            <h1 id="main" class="h1_big">SHA384</h1>
-            <textarea class="input" id="input" oninput="autohash()" placeholder="Plaintext"></textarea>
+            <h1 id="main" class="h1_big">AES Encryption</h1>
+            <textarea class="input" id="input" oninput="autoencrypt()" spellcheck="false" placeholder="Plaintext"></textarea>
+            <textarea class="key" id="key" oninput="autoencrypt()" spellcheck="false" placeholder="Key"></textarea>
             <br>
             <div class="row">
-              <button class="button btn btn-custom" onclick="hash()">Submit</button>
+              <button class="button btn btn-custom" onclick="encrypt()">Submit</button>
+              <button class="button btn btn-custom" onclick="generate()">Generate Random</button>
               <button class="button btn btn-custom" onclick="toggle()" id="au">Auto-update</button>
             </div>
             <br>
             <div class="output">
-              <p id="output"></p>
-              <p id="output2"></p>
+              <p id="outputB64"></p>
+              <p id="outputHex"></p>
+              <p id="outputMs"></p>
             </div>
           </div>
-          <div class="column4">
-            <h1>Content...</h1>
-            <p></p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+          <div class="column5">
+            <h1 id="main" class="h1_big dark">Decryption</h1>
+            <textarea class="input" id="input2" oninput="autodecrypt()" spellcheck="false" placeholder="Encrypted"></textarea>
+            <textarea class="key" id="key2" oninput="autodecrypt()" spellcheck="false" placeholder="Key"></textarea>
+            <br>
+            <div class="row">
+              <button class="button btn btn-custom" onclick="decrypt()">Submit</button>
+              <button class="button btn btn-custom" onclick="toggle2()" id="au2">Auto-update</button>
+            </div>
+            <br>
+            <div class="output">
+              <p id="outputPt"></p>
+              <p id="outputMs-2"></p>
+            </div>
           </div>
         </div>
       </section>
-      <!-- section 2 close -->
+      <!-- section 3 close -->
+
 
     </div>
     <!-- content close -->
@@ -145,28 +180,64 @@
     </footer>
     <!-- footer close -->
 
-    <script src="../resources/javascript/functions.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script>
-    <script>
+    <script src="../resources/javascript/functions.js"></script>
+    <script type="text/javascript">
 
-      function hash() {
+      function encrypt() {
         var start = window.performance.now();
-        var input = document.getElementById("input").value
-        var hash = CryptoJS.SHA384(input).toString();
-        if (input.length > 0) {
-          document.getElementById("output").innerHTML = hash;
-          document.getElementById("output2").innerHTML = window.performance.now() - start;
+        var input = document.getElementById("input").value;
+        var keyStr = document.getElementById("key").value;
+        var keyHex = CryptoJS.enc.Hex.parse(keyStr);
+        var ct = CryptoJS.AES.encrypt(input, keyHex,{mode: CryptoJS.mode.ECB}).toString();
+        var B64ct = CryptoJS.enc.Base64.parse(ct)
+
+        if (input.length == 0) {
+          document.getElementById("outputB64").innerHTML = "";
+          document.getElementById("outputHex").innerHTML = "";
+          document.getElementById("outputMs").innerHTML = "";
+        }
+        else if (keyStr.length == 16 || keyStr.length == 24 || keyStr.length == 32) {
+          document.getElementById("outputB64").innerHTML = "Base64: "+ct.toString(CryptoJS.enc.Base64);
+          document.getElementById("outputHex").innerHTML = "Hexadecimal: "+CryptoJS.enc.Hex.stringify(B64ct);
+          document.getElementById("outputMs").innerHTML = window.performance.now() - start+" ms";
         }
         else {
-          document.getElementById("output").innerHTML = "";
-          document.getElementById("output2").innerHTML = "";
+          document.getElementById("outputB64").innerHTML = "Key must be a Hexadecimal and length must be 16, 24 or 32. (128, 192 or 256 bits)";
+          document.getElementById("outputHex").innerHTML = "";
+          document.getElementById("outputMs").innerHTML = "";
+          }
+        }
+
+      function decrypt() {
+        var start = window.performance.now();
+        var ct = document.getElementById("input2").value;
+        var keyStr = document.getElementById("key2").value;
+        var keyHex = CryptoJS.enc.Hex.parse(keyStr);
+        var dt = CryptoJS.AES.decrypt(ct, keyHex,{mode: CryptoJS.mode.ECB});
+
+        if (ct.length == 0) {
+          document.getElementById("outputPt").innerHTML = "";
+          document.getElementById("outputMs-2").innerHTML = "";
+        }
+        else if (keyStr.length == 16 || keyStr.length == 24 || keyStr.length == 32) {
+          document.getElementById("outputPt").innerHTML = "Plaintext: "+dt.toString(CryptoJS.enc.Utf8);
+          document.getElementById("outputMs-2").innerHTML = window.performance.now() - start+" ms";
+        }
+        else {
+          document.getElementById("outputPt").innerHTML = "Key must be a Hexadecimal and length must be 16, 24 or 32. (128, 192 or 256 bits)";
+          document.getElementById("outputMs-2").innerHTML = "";
         }
       }
-      function autohash() {
-        if (document.getElementById("au").classList.contains('off') == false) {
-          hash()
-        }
+
+      function generate() {
+
       }
+
+      function autoencrypt() {if (document.getElementById("au").classList.contains('off') == false) {encrypt();}}
+      function autodecrypt() {if (document.getElementById("au2").classList.contains('off') == false) {decrypt();}}
+
     </script>
+
   </body>
 </html>

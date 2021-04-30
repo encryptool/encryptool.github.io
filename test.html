@@ -1,94 +1,187 @@
-<html data-lt-installed="true"><head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width">
-<title>A pure CSS parallax demo by Keith Clark</title>
-<meta name="description" content="Demonstration of the pure CSS parallax scrolling concept">
-<style>
+<!DOCTYPE html>
 
-  /* Parallax base styles
-  --------------------------------------------- */
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Encryptool</title>
+    <link rel="icon" href="resources/images/logo.jpeg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  .parallax {
-    height: 100vh;
-    overflow-x: hidden;
-    overflow-y: auto;
-    -webkit-perspective: 1px;
-    perspective: 1px;
-  }
+    <link rel="stylesheet" href="resources/CSS/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="resources/CSS/animate.css" type="text/css">
+    <link rel="stylesheet" href="resources/CSS/style.css" type="text/css">
+    <link rel="stylesheet" href="resources/CSS/bg.css" type="text/css">
+    <link rel="stylesheet" id="colors" href="resources/CSS/colors/orange.css" type="text/css">
+  </head>
 
-  .parallax__layer {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-  }
-
-  .parallax__layer--base {
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-  }
-
-  .parallax__layer--back {
-    -webkit-transform: translateZ(-1px);
-    transform: translateZ(-1px);
-  }
+  <body id="homepage" class="de_light" style="display: block;" data-new-gr-c-s-check-loaded="14.998.0" data-gr-ext-installed="">
 
 
-  /* demo styles
-  --------------------------------------------- */
+    <!-- navbar start -->
+    <header class="navbar" id="navbar">
+      <div class="container" style="background-size: cover;">
+          <div style="background-size: cover;">
+            <nav>
+              <a href="index.html"><h1 id="logo" class="logo" style="padding-top: 8px;float:left;margin-left:25px;">Encryp<span class="id-color">Tool.</span></h1></a>
+              <ul id="mainmenu" class="no-separator">
+                <li><a href="index.html">Home<span></span></a><span></span></li>
+                <li><a href="#">Tools<span></span></a><span></span>
+                  <ul>
+                    <li><a href="index.html">Hashing</a></li>
+                    <li><a href="encrypt/index.html">Encryption</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Project<span></span></a><span></span>
+                  <ul>
+                    <li><a href="#artefact-page">Artefact</a></li>
+                    <li><a href="#essay-page">Essay</a></li>
+                    <li><a href="https://docs.google.com/presentation/d/e/2PACX-1vSvpqDf-9oXc66ujdZwEa75ihpSgwbVrXPDt0G5Z_AV81wl3FmX-1-RdymxYAaNdhMJy6KeuC1Ry683/pub?start=false&loop=false&delayms=5000">Presentation</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#about-me">About Me<span></span></a><span></span>
+                  <a href="#">Contact<span></span></a><span></span>
+                </li>
+              </ul>
+            </nav>
+          </div>
 
-  * {
-    margin:0;
-    padding:0;
-  }
-
-  body {
-    font: 100% / 1.5 Arial;
-  }
-
-  .parallax {
-    font-size: 200%;
-  }
-
-   /* add some padding to force scrollbars */
-  .parallax__layer {
-    padding: 100vh 0;
-  }
-
-   /* centre the content in the parallax layers */
-  .title {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-  }
+      </div>
+    </header>
+    <!-- navbar end -->
 
 
-  /* misc
-  --------------------------------------------- */
-  .demo__info {
-    position: absolute;
-    z-index:100;
-    bottom: 1vh;
-    top: auto;
-    font-size:80%;
-    text-align:center;
-    width: 100%;
-  }
-</style>
-<style></style></head>
+    <!-- content start -->
+    <div id="content" class="no-bottom no-top" style="background-size: cover;">
 
-<body data-new-gr-c-s-check-loaded="14.998.0" data-gr-ext-installed="">
-  <div class="demo__info">
-    Pure CSS parallax scroll demo #1 by Keith Clark. Please read the <a href="../">blog post</a> for more information.
-  </div>
-  <div class="parallax">
-    <div class="parallax__layer parallax__layer--back">
-      <div >This is the background</div>
+      <!-- section 1 start -->
+      <section id="hasher-section-picture" class="full-height relative no-top no-bottom text-light" style="height: 100vh; background-size: cover;">
+
+        <div class="overlay-gradient t0" style="background-size: cover;">
+          <div class="center-y relative" data-scroll-speed="4" style="background-size: cover;">
+            <div class="container" style="background-size: cover;">
+                <div class="col-md-8" style="background-size: cover;">
+                  <div class="mask" style="background-size: cover;">
+                    <h1 id="encryptool" class="wow fadeInUp big animated" style="visibility: visible; animation-name: fadeInUp;">Hasher<span class="id-color">Tool.</span></h1>
+                  </div>
+                </div>
+                <div class="col-md-6" style="background-size: cover;">
+                  <div class="spacer-half" style="background-size: cover;"></div>
+                  <a href="#main" class="wow fadeInUp btn btn-custom animated" data-wow-delay="0.8s" style="visibility: visible; animation-delay: 0.8s; animation-name: fadeInUp;">Get Started</a>
+                </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- section 1 close -->
+
+      <!-- section 2 start -->
+      <section class="no-top no-bottom" id="index-section-picture-3" style="height: 100vh;">
+        <div class="row" style="height: 100vh;">
+          <div class="column3">
+            <h1 id="main" class="h1_big">SHA256</h1>
+            <textarea class="input" id="input" oninput="autohash()" placeholder="Plaintext"></textarea>
+            <br>
+            <div class="row">
+              <button class="button btn btn-custom" onclick="hash();average()">Submit</button>
+              <button class="button btn btn-custom" onclick="toggle()" id="au">Auto-update</button>
+            </div>
+            <br>
+            <div class="output">
+              <p id="output"></p>
+              <p id="output2"></p>
+            </div>
+          </div>
+          <div class="column4">
+            <h1>Information</h1>
+            <p></p>
+            <p>Secure Hash Algorithm 256 or SHA 256 is defined as one of the most secure ways to protect digital information. SHA 256 is a math process that generates a 256 bit (64 character long) random sequence of letters and numbers (hash) out of any input.</p>
+            <p></p>
+            <p>Uses: SHA-256 is used in some of the most popular authentication and encryption protocols for secure password hashing. Cryptocurrencies such as Bitcoin use SHA-256 for verifying transactions.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Test phrase.</p>
+          </div>
+        </div>
+      </section>
+      <!-- section 2 close -->
+
     </div>
-    <div class="parallax__layer parallax__layer--base">
-      <div >This is the foreground</div>
-    </div>
-  </div>
+    <!-- content close -->
+
+
+    <!-- footer start -->
+    <footer>
+      <div id="about-me" class="container" style="background-size: cover;">
+          <div class="column" style="background-size: cover;">
+            <div class="widget" style="background-size: cover;">
+              <h5>About Me</h5>
+              <div class="tiny-border" style="background-size: cover;"><span></span></div>
+              <p>My name is Mackenzie Moore and I'm a student at Dr Challoner's Grammar school. For my extended project qualification, I have chosen to create a website in order to be the home for my online encryption tools.</p>
+            </div>
+          </div>
+          <div class="column" style="background-size: cover;">
+            <div class="widget" style="background-size: cover;">
+              <h5>Contact</h5>
+              <div class="tiny-border" style="background-size: cover;"><span></span></div>
+              <ul>
+                <li><a href="https://www.instagram.com/k3nzie.m/?hl=en"><img id="contact" src="resources/images/instagram.png" alt="instagram"></img>Instagram</a></li>
+                <li><a href="https://github.com/mackenzielo"><img id="contact" src="resources/images/github.png" alt="github"></img>Github</a></li>
+                <li><a><img id="contact" src="resources/images/mail.png" alt="mail"></img>MackenzieLMoore@outlook.com</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="column" style="background-size: cover;">
+            <div class="widget" style="background-size: cover;">
+              <h5>Cryptography</h5>
+              <div class="tiny-border" style="background-size: cover;"><span></span></div>
+              <p>Cryptography is incredibly important in the protection of information, so my aim is to educate more people on how they work and how to ensure they are as protected as they can be.</p>
+            </div>
+          </div>
+      </div>
+
+      <div class="subfooter" style="background-size: cover;">
+        <div class="container text-center" style="background-size: cover;">
+          <div class="row" style="background-size: cover;">
+              © Copyright 2021 - by Mackenzie Moore
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- footer close -->
+
+    <script src="resources/javascript/functions.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script>
+    <script>
+
+      function hash() {
+        var start = window.performance.now();
+        var input = document.getElementById("input").value
+        var hash = CryptoJS.SHA3(input, { outputLength: 224 }).toString();
+        var time;
+        if (input.length > 0) {
+          document.getElementById("output").innerHTML = hash;
+          time = window.performance.now() - start;
+          return time;
+        }
+        else {
+          document.getElementById("output").innerHTML = "";
+          document.getElementById("output2").innerHTML = "";
+        }
+      }
+      function average() {
+        var sum = 0;
+        for (i = 0; i < 100000; i++) {
+          sum = sum + hash()
+        }
+        document.getElementById("output2").innerHTML = sum/100000;
+        sum = 0
+      }
+
+      function autohash() {
+        if (document.getElementById("au").classList.contains('off') == false) {
+          hash()
+        }
+      }
+    </script>
+  </body>
+</html>

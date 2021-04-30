@@ -79,7 +79,7 @@
       <section class="no-top no-bottom" id="index-section-picture-3" style="height: 100vh;">
         <div class="row" style="height: 100vh;">
           <div class="column3">
-            <h1 id="main" class="h1_big">SHA384</h1>
+            <h1 id="main" class="h1_big">SHA3-256</h1>
             <textarea class="input" id="input" oninput="autohash()" placeholder="Plaintext"></textarea>
             <br>
             <div class="row">
@@ -152,7 +152,7 @@
       function hash() {
         var start = window.performance.now();
         var input = document.getElementById("input").value
-        var hash = CryptoJS.SHA384(input).toString();
+        var hash = CryptoJS.SHA3(input, { outputLength: 256 }).toString();
         if (input.length > 0) {
           document.getElementById("output").innerHTML = hash;
           document.getElementById("output2").innerHTML = window.performance.now() - start;

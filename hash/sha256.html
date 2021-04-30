@@ -35,7 +35,7 @@
                   <ul>
                     <li><a href="#artefact-page">Artefact</a></li>
                     <li><a href="#essay-page">Essay</a></li>
-                    <li><a href="#presentation-page">Presentation</a></li>
+                    <li><a href="https://docs.google.com/presentation/d/e/2PACX-1vSvpqDf-9oXc66ujdZwEa75ihpSgwbVrXPDt0G5Z_AV81wl3FmX-1-RdymxYAaNdhMJy6KeuC1Ry683/pub?start=false&loop=false&delayms=5000">Presentation</a></li>
                   </ul>
                 </li>
                 <li>
@@ -93,9 +93,12 @@
             </div>
           </div>
           <div class="column4">
-            <h1>Content...</h1>
+            <h1>Information</h1>
             <p></p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Secure Hash Algorithm 256 or SHA 256 is defined as one of the most secure ways to protect digital information. SHA 256 is a math process that generates a 256 bit (64 character long) random sequence of letters and numbers (hash) out of any input.</p>
+            <p></p>
+            <p>Uses: SHA-256 is used in some of the most popular authentication and encryption protocols for secure password hashing. Cryptocurrencies such as Bitcoin use SHA-256 for verifying transactions.</p>
+            <p></p>
           </div>
         </div>
       </section>
@@ -151,7 +154,7 @@
 
       function hash() {
         var start = window.performance.now();
-        var input = document.getElementById("input").value
+        var input = document.getElementById("input").value;
         var hash = CryptoJS.SHA256(input).toString();
         if (input.length > 0) {
           document.getElementById("output").innerHTML = hash;

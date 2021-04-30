@@ -1,15 +1,17 @@
 
 /*  main  */
-#index-section-picture {background:url(../images/background/bg1.jpeg);}
-#index-section-picture-2 {background:url(../images/background/bg2.jpeg);}
-#index-section-picture-3 {background:url(../images/background/bg5.jpeg);}
+#index-section-picture {background:url(../images/background/bg1.jpeg);background-repeat: no-repeat;background-size: cover;}
+#index-section-picture-2 {background:url(../images/background/bg2.jpeg);background-repeat: no-repeat;background-size: cover;}
+
 
 /*  hash  */
-#index-section-options {background:url(../images/background/bg6.jpeg);}
-#hasher-section-picture {background:url(../images/background/bg3.jpeg) ;}
+#index-section-options {background:url(../images/background/bg6.jpeg);background-repeat: no-repeat;background-size: cover;}
+#hasher-section-picture {background:url(../images/background/bg3.jpeg);background-repeat: no-repeat;background-size: cover;}
 
 /*  encrypt */
-#encryptor-section-picture {background:url(../images/background/bg4.jpeg); height: 100vh;}
+#encryptor-section-picture {background:url(../images/background/bg4.jpeg); height: 100vh;background-repeat: no-repeat;background-size: cover;}
+#encryption-info-picture {background:url(../images/background/bg7.jpeg); background-repeat:no-repeat;background-size: cover;}
+#index-section-picture-3 {background:url(../images/background/bg5.jpeg);background-repeat: no-repeat;background-size: cover;}
 
 @media only screen and (min-device-width: 768) and (max-device-width: 1024) and (orientation: portrait){
 	section{
