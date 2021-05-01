@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Encryptool</title>
+    <link rel="icon" href="../resources/images/logo.jpeg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../resources/CSS/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="../resources/CSS/animate.css" type="text/css">
+    <link rel="stylesheet" href="../resources/CSS/style.css" type="text/css">
+    <link rel="stylesheet" href="../resources/CSS/bg.css" type="text/css">
+    <link rel="stylesheet" id="colors" href="../resources/CSS/colors/orange.css" type="text/css">
+  </head>
+
+  <body id="homepage" class="de_light" style="display: block;" data-new-gr-c-s-check-loaded="14.998.0" data-gr-ext-installed="">
+
+
+    <!-- navbar start -->
+    <header class="navbar" id="navbar">
+      <div class="container" style="background-size: cover;">
+          <div style="background-size: cover;">
+            <nav>
+              <a href="index.html"><h1 id="logo" class="logo" style="float:left;margin-left:25px;">Encryp<span class="id-color">Tool.</span></h1></a>
+              <ul id="mainmenu" class="no-separator">
+                <li><a href="../index.html">Home<span></span></a><span></span></li>
+                <li><a href="#">Tools<span></span></a><span></span>
+                  <ul>
+                    <li><a href="../hash/index.html">Hashing</a></li>
+                    <li><a href="index.html">Encryption</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Project<span></span></a><span></span>
+                  <ul>
+                    <li><a href="#artefact-page">Artefact</a></li>
+                    <li><a href="https://docs.google.com/document/d/e/2PACX-1vTNa5USD8xrXgLmG-ynyawUtU7nplKnXGIcUKfWRUXfMwSJb5u3KBhhz5uOmbvVcF7w51bK-l-W11FA/pub">Essay</a></li>
+                    <li><a href="https://docs.google.com/presentation/d/e/2PACX-1vSvpqDf-9oXc66ujdZwEa75ihpSgwbVrXPDt0G5Z_AV81wl3FmX-1-RdymxYAaNdhMJy6KeuC1Ry683/pub?start=false&loop=false&delayms=5000">Presentation</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#about-me">About Me<span></span></a><span></span>
+                  <a href="#">Contact<span></span></a><span></span>
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+      </div>
+    </header>
+    <!-- navbar end -->
+
+
+    <!-- content start -->
+    <div id="content" class="no-bottom no-top" style="background-size: cover;">
+
+      <!-- section 1 start -->
+      <section id="encryptor-section-picture" class="full-height relative no-top no-bottom text-light" style="height: 100vh; background-size: cover;">
+
+        <div class="overlay-gradient t0" style="background-size: cover;">
+          <div class="center-y relative" data-scroll-speed="4" style="background-size: cover;">
+            <div class="container" style="background-size: cover;">
+                <div class="col-md-8" style="background-size: cover;">
+                  <div class="mask" style="background-size: cover;">
+                    <h1 id="encryptool" class="wow fadeInUp big animated" style="visibility: visible; animation-name: fadeInUp;">Encryptor<span class="id-color">Tool.</span></h1>
+                  </div>
+                </div>
+                <div class="col-md-6" style="background-size: cover;">
+                  <div class="spacer-half" style="background-size: cover;"></div>
+                  <a href="#main" class="wow fadeInUp btn btn-custom animated" data-wow-delay="0.8s" style="visibility: visible; animation-delay: 0.8s; animation-name: fadeInUp;">Get Started</a>
+                </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- section 1 close -->
+
+
+      <!-- section 2 start -->
+      <section class="" id="instructions">
+        <div class="no-top no-bottom" id="encryption-info-picture"></div>
+        <div class="row" style="height:inherit;">
+          <div class="column1 text-black">
+            <h1 class="h1_big">Information</h1>
+            <p>It was found that the first few bytes of the keystream in RC4 were strongly non-random and leaked information about the key. This is countered here in RC4 Drop by dropping the inital part of the key stream and increasing security.</p>
+          </div>
+          <div class="column6 text-white">
+            <h1 class="h1_big">How to use<span class="id-color">:</span></h1>
+            <p>Firstly, input a key. This will be used in the algorithm to encrypt your plaintext. Alternatively, the generate key button will do so for you.</p>
+            <p>Then, input some plaintext; what you want to encrypt. An output will appear in the bottom boxes with the base64 and hexadecimal versions of your ciphertext along with execution time.</p>
+            <p>Conversely, to decrypt, simply add the base64 ciphertext into the top input box along with key to decrypt with.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- section 2 close -->
+
+
+      <!-- section 3 start -->
+      <section class="no-top no-bottom" id="index-section-picture-3">
+        <div class="row" style="height: 100vh;">
+          <div class="column3">
+            <h1 id="main" class="h1_big">RC4 (drop) Encryption</h1>
+            <textarea class="input" id="input" oninput="autoencrypt()" spellcheck="false" placeholder="Plaintext"></textarea>
+            <textarea class="key" id="key" oninput="autoencrypt()" spellcheck="false" placeholder="Hexadecimal Key"></textarea>
+            <br>
+            <div class="row">
+              <button class="button btn btn-custom" onclick="encrypt()">Submit</button>
+              <button class="button btn btn-custom" onclick="generate()">Generate Random</button>
+              <button class="button btn btn-custom" onclick="toggle()" id="au">Auto-update</button>
+            </div>
+            <br>
+            <div class="output">
+              <p id="outputB64"></p>
+              <p id="outputHex"></p>
+              <p id="outputMs"></p>
+            </div>
+          </div>
+
+          <div class="column5">
+            <h1 id="main" class="h1_big dark">Decryption</h1>
+            <textarea class="input" id="input2" oninput="autodecrypt()" spellcheck="false" placeholder="Base64 Ciphertext"></textarea>
+            <textarea class="key" id="key2" oninput="autodecrypt()" spellcheck="false" placeholder="Hexadecimal Key"></textarea>
+            <br>
+            <div class="row">
+              <button class="button btn btn-custom" onclick="decrypt()">Submit</button>
+              <button class="button btn btn-custom" onclick="toggle2()" id="au2">Auto-update</button>
+            </div>
+            <br>
+            <div class="output">
+              <p id="outputPt"></p>
+              <p id="outputMs-2"></p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- section 3 close -->
+
+
+    </div>
+    <!-- content close -->
+
+
+    <!-- footer start -->
+    <footer>
+      <div id="about-me" class="container" style="background-size: cover;">
+          <div class="column" style="background-size: cover;">
+            <div class="widget" style="background-size: cover;">
+              <h5>About Me</h5>
+              <div class="tiny-border" style="background-size: cover;"><span></span></div>
+              <p>My name is Mackenzie Moore and I'm a student at Dr Challoner's Grammar school. For my extended project qualification, I have chosen to create a website in order to be the home for my online encryption tools.</p>
+            </div>
+          </div>
+          <div class="column" style="background-size: cover;">
+            <div class="widget" style="background-size: cover;">
+              <h5>Contact</h5>
+              <div class="tiny-border" style="background-size: cover;"><span></span></div>
+              <ul>
+                <li><a href="https://www.instagram.com/k3nzie.m/?hl=en"><img id="contact" src="../resources/images/instagram.png" alt="instagram"></img>Instagram</a></li>
+                <li><a href="https://github.com/mackenzielo"><img id="contact" src="../resources/images/github.png" alt="github"></img>Github</a></li>
+                <li><a><img id="contact" src="../resources/images/mail.png" alt="mail"></img>MackenzieLMoore@outlook.com</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="column" style="background-size: cover;">
+            <div class="widget" style="background-size: cover;">
+              <h5>Cryptography</h5>
+              <div class="tiny-border" style="background-size: cover;"><span></span></div>
+              <p>Cryptography is incredibly important in the protection of information, so my aim is to educate more people on how they work and how to ensure they are as protected as they can be.</p>
+            </div>
+          </div>
+      </div>
+
+      <div class="subfooter" style="background-size: cover;">
+        <div class="container text-center" style="background-size: cover;">
+          <div class="row" style="background-size: cover;">
+              © Copyright 2021 - by Mackenzie Moore
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- footer close -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script>
+    <script src="../resources/javascript/functions.js"></script>
+    <script type="text/javascript">
+
+      function encrypt() {
+        var start = window.performance.now();
+        var input = document.getElementById("input").value;
+        var keyStr = document.getElementById("key").value;
+        var keyHex = CryptoJS.enc.Hex.parse(keyStr);
+        var ct = CryptoJS.RC4Drop.encrypt(input, keyHex,{mode: CryptoJS.mode.ECB}).toString();
+        var B64ct = CryptoJS.enc.Base64.parse(ct)
+
+        if (input.length == 0) {
+          document.getElementById("outputB64").innerHTML = "";
+          document.getElementById("outputHex").innerHTML = "";
+          document.getElementById("outputMs").innerHTML = "";
+        }
+        else if (keyStr.length > 10 & keyStr.length < 512) {
+          document.getElementById("outputB64").innerHTML = "Base64: "+ct.toString(CryptoJS.enc.Base64);
+          document.getElementById("outputHex").innerHTML = "Hexadecimal: "+CryptoJS.enc.Hex.stringify(B64ct);
+          document.getElementById("outputMs").innerHTML = window.performance.now() - start+" ms";
+        }
+        else {
+          document.getElementById("outputB64").innerHTML = "Key must be a Hexadecimal with length of between 10 and 512. (40 - 2048 bits)";
+          document.getElementById("outputHex").innerHTML = "";
+          document.getElementById("outputMs").innerHTML = "";
+          }
+        }
+
+      function decrypt() {
+        var start = window.performance.now();
+        var ct = document.getElementById("input2").value;
+        var keyStr = document.getElementById("key2").value;
+        var keyHex = CryptoJS.enc.Hex.parse(keyStr);
+        var dt = CryptoJS.RC4Drop.decrypt(ct, keyHex,{mode: CryptoJS.mode.ECB});
+
+        if (ct.length == 0) {
+          document.getElementById("outputPt").innerHTML = "";
+          document.getElementById("outputMs-2").innerHTML = "";
+        }
+        else if (keyStr.length > 10 & keyStr.length < 512) {
+          document.getElementById("outputPt").innerHTML = "Plaintext: "+dt.toString(CryptoJS.enc.Utf8);
+          document.getElementById("outputMs-2").innerHTML = window.performance.now() - start+" ms";
+        }
+        else {
+          document.getElementById("outputPt").innerHTML = "Key must be a Hexadecimal with length of between 10 and 512. (40 - 2048 bits)";
+          document.getElementById("outputMs-2").innerHTML = "";
+        }
+      }
+
+      function generate() {
+        var rand = Math.random();
+        rand *= 502;
+        rand = Math.floor(rand);
+
+        document.getElementById("key").value = getRanHex(rand+10);
+        input = document.getElementById("input").value;
+        if (input.length != 0) {
+          encrypt();
+        }
+      }
+
+      const getRanHex = size => {
+        let result = [];
+        let hexRef = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f'];
+
+        for (let n = 0; n < size; n++) {
+          result.push(hexRef[Math.floor(Math.random() * 16)]);
+        }
+        return result.join('');
+      }
+
+      function autoencrypt() {if (document.getElementById("au").classList.contains('off') == false) {encrypt();}}
+      function autodecrypt() {if (document.getElementById("au2").classList.contains('off') == false) {decrypt();}}
+
+    </script>
+
+  </body>
+</html>

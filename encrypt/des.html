@@ -82,12 +82,14 @@
         <div class="row" style="height:inherit;">
           <div class="column1 text-black">
             <h1 class="h1_big">Information</h1>
-            <p>info...</p>
+            <p>DES (data encryption standard) is an encryption algorithm developed in the 1970s which was highly influential; leading to many advancements in cryptography.</p>
+            <p>However, DES can no longer be considered secure. While no major flaws in its innards are known, it is fundamentally inadequate because its 56-bit (not including 8 parity bits) key is too short.</p>
           </div>
           <div class="column6 text-white">
             <h1 class="h1_big">How to use<span class="id-color">:</span></h1>
-            <p>Firstly, input a key. This will be used in the algorithm to encrypt your plaintext. Next, input an initialisation vector. This is to ensure that, even with the same key, the encryption is never the same, adding to it's security. Finally, add the text you want to encrypt, and there you go!</p>
-            <p>To decrypt, do the same in the decryption section, ensuring that the key and initialisation vector are the same (spaces count as characters!).</p>
+            <p>Firstly, input a key. This will be used in the algorithm to encrypt your plaintext. Alternatively, the generate key button will do so for you.</p>
+            <p>Then, input some plaintext; what you want to encrypt. An output will appear in the bottom boxes with the base64 and hexadecimal versions of your ciphertext along with execution time.</p>
+            <p>Conversely, to decrypt, simply add the base64 ciphertext into the top input box along with key to decrypt with.</p>
           </div>
         </div>
       </section>
@@ -197,13 +199,13 @@
           document.getElementById("outputHex").innerHTML = "";
           document.getElementById("outputMs").innerHTML = "";
         }
-        else if (keyStr.length == 14) {
+        else if (keyStr.length == 16) {
           document.getElementById("outputB64").innerHTML = "Base64: "+ct.toString(CryptoJS.enc.Base64);
           document.getElementById("outputHex").innerHTML = "Hexadecimal: "+CryptoJS.enc.Hex.stringify(B64ct);
           document.getElementById("outputMs").innerHTML = window.performance.now() - start+" ms";
         }
         else {
-          document.getElementById("outputB64").innerHTML = "Key must be a Hexadecimal and length must be 14. (56 bits)";
+          document.getElementById("outputB64").innerHTML = "Key must be a Hexadecimal and length must be 16. (64 bits)";
           document.getElementById("outputHex").innerHTML = "";
           document.getElementById("outputMs").innerHTML = "";
           }
@@ -220,20 +222,23 @@
           document.getElementById("outputPt").innerHTML = "";
           document.getElementById("outputMs-2").innerHTML = "";
         }
-        else if (keyStr.length == 14) {
+        else if (keyStr.length == 16) {
           document.getElementById("outputPt").innerHTML = "Plaintext: "+dt.toString(CryptoJS.enc.Utf8);
           document.getElementById("outputMs-2").innerHTML = window.performance.now() - start+" ms";
         }
         else {
-          document.getElementById("outputPt").innerHTML = "Key must be a Hexadecimal and length must 14. (56 bits)";
+          document.getElementById("outputPt").innerHTML = "Key must be a Hexadecimal and length must 16. (64 bits)";
           document.getElementById("outputMs-2").innerHTML = "";
         }
       }
 
       function generate() {
-        ranHex = getRanHex(14)
-        document.getElementById("key").setAttribute('innerHTML', ranHex)
-        console.log(ranHex)
+        ranHex = getRanHex(16);
+        document.getElementById("key").value = ranHex;
+        input = document.getElementById("input").value;
+        if (input.length != 0) {
+          encrypt();
+        }
       }
 
       const getRanHex = size => {

@@ -315,6 +315,10 @@ section#instructions {
 	padding: 0;
 }
 
+#instructions a {
+	color: rgb(80,80,255);
+}
+
 #encryption-info-picture {
 	height: inherit;
 	position: absolute;
@@ -430,7 +434,7 @@ section#instructions {
 
 .column4 {
 	flex: 33%;
-	padding: 20px;
+	padding: 5%;
 	background: black;
 	opacity: 0.5;
 	height: inherit;
@@ -439,7 +443,8 @@ section#instructions {
 }
 
 .column4 p {
-	font-size: 18px;
+	padding-top: 20px;
+	font-size: 20px;
 }
 
 .column5 {
