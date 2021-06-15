@@ -40,7 +40,7 @@
                 </li>
                 <li>
                   <a href="#about-me">About Me<span></span></a><span></span>
-                  <a href="#">Contact<span></span></a><span></span>
+                  <a href="#contact">Contact<span></span></a><span></span>
                 </li>
               </ul>
             </nav>
@@ -75,6 +75,23 @@
       </section>
       <!-- section 1 close -->
 
+      <!-- section 2 start -->
+      <section id="writeup">
+        <h1>Hashing and Passwords</h1>
+        <img src="../resources/images/hashing.png" style="width:50vw;" alt="">
+        <p>Hashing is the process of converting an input into a hash value. This is done through the means of a mathematical algorithm to generate the new value.</p>
+        <h2>Uses</h2>
+        <p>It is a one-way transformation that is used mainly for the comparison of values. For example: when an account is created for an app or website, the password is stored in a database with the corresponding information, like a username, email, etc. Upon attempting to log into this account again, the password you enter into the login box will be hashed, using the same algorithm, and compared with the one in the database. If they match, access is granted, if not, then the password was not a match.</p>
+        <p>The password is stored as a hash value in order to prevent attackers from entering your account. If they get hold of the database, the passwords will only appear as hash values rather than the plaintext password; it provides a layer of security for your accounts. This is, however, not bullet proof.</p>
+        <p>Another common use would be for checking if a file has been corrupted upon moving from one location to another for file recovery. Instead of having to check every word, you can simply hash the file before it was moved and after. If both hashes are the same, then the files are an exact match.</p>
+        <p>Arguably the most common use for hashing, specifically with the SHA256 algorithm, is in cryptocurrency by 'miners'. For example, bitcoin miners get paid for their work as auditors. They are doing the work of verifying the legitimacy of Bitcoin transactions in order to prevent a problem called 'double spending'. This is where an owner spends the same bitcoin twice by making a copy and sending it to the merchant, while keeping the original. For more information on bitcoin mining, I suggest taking a look <a href="https://www.investopedia.com/tech/how-does-bitcoin-mining-work">here.</a></p>
+        <h2>Bruteforcing</h2>
+        <p>There is a method called 'Bruteforcing', in which an attacker can cycle through all possible combinations of letters, numbers and special characters, hashing each one in order to find a match. To combat this, use of longer passwords as well as special characters will maximise your password security. With each extra letter, the number of possible combinations increases exponentially.</p>
+        <p>Say the password was only made of lowercase letters and is 4 characters long. The number of possible combinations is 26^4 = 456,976. At a rate of 10,000,000 guesses per second, it would take that computer 0.0456976 seconds. About double the human reaction time. However, if that password is 10 letters long and contains lowercase, uppercase, numbers and special characters, the possible combinations will be 92^10 (approx) = 43,438,845,000,000,000,000. This would take 137,652 years at the same rate.</p>
+        <p>This is why it is vital that you choose as long a password as you can, 10 characters is sufficient. Though this is one method of bruteforcing, passwords are also cracked by bruteforcing known passwords, words and sequences. This is why you shouldn't include commonly used sequences or word, such as: '123456789' or 'dog'. To showcase how one should strengthen a password, if I had the password 'ski123', in order to increase the strength of this very significantly, I would change it to 'Sk1-ing12$'</p>
+        <p>The reason some hash algorithms are quicker to break are because the hash value produced is smaller. For example, MD5 produces a 128-bit hash value. This is much quicker to compute than the SHA-512 algorithm, which produces a 512-bit hash value. This is why algorithms with larger hash values are used to store passwords; the password will take longer to crack.</p>
+      </section>
+      <!-- section 2 close -->
 
       <!-- section 3 start -->
       <section id="index-section-options" style="background-size: cover;">

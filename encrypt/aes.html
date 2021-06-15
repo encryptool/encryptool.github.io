@@ -199,13 +199,13 @@
           document.getElementById("outputHex").innerHTML = "";
           document.getElementById("outputMs").innerHTML = "";
         }
-        else if (keyStr.length == 32 || keyStr.length == 48 || keyStr.length == 64) {
+        else if (keyStr.length == 16 || keyStr.length == 24 || keyStr.length == 32) {
           document.getElementById("outputB64").innerHTML = "Base64: "+ct.toString(CryptoJS.enc.Base64);
           document.getElementById("outputHex").innerHTML = "Hexadecimal: "+CryptoJS.enc.Hex.stringify(B64ct);
           document.getElementById("outputMs").innerHTML = window.performance.now() - start+" ms";
         }
-        else if (key.length != 32 || keyStr.length != 48 || keyStr.length != 64){
-          document.getElementById("outputB64").innerHTML = "Key must be a Hexadecimal and length must be 32, 48 or 64. (128, 192 or 256 bits)";
+        else if (key.length != 16 || keyStr.length != 24 || keyStr.length != 32){
+          document.getElementById("outputB64").innerHTML = "Key must be a Hexadecimal and length must be 16, 24 or 32. (128, 192 or 256 bits)";
           document.getElementById("outputHex").innerHTML = "";
           document.getElementById("outputMs").innerHTML = "";
           }
@@ -223,24 +223,29 @@
           document.getElementById("outputPt").innerHTML = "";
           document.getElementById("outputMs-2").innerHTML = "";
         }
-        else if (keyStr.length == 32 || keyStr.length == 48 || keyStr.length == 64) {
+        else if (keyStr.length == 16 || keyStr.length == 24 || keyStr.length == 32) {
           document.getElementById("outputPt").innerHTML = "Plaintext: "+dt.toString(CryptoJS.enc.Utf8);
           document.getElementById("outputMs-2").innerHTML = window.performance.now() - start+" ms";
         }
         else {
-          document.getElementById("outputPt").innerHTML = "Key must be a Hexadecimal and length must be 32, 48 or 64. (128, 192 or 256 bits)";
+          document.getElementById("outputPt").innerHTML = "Key must be a Hexadecimal and length must be 16, 24 or 32. (128, 192 or 256 bits)";
           document.getElementById("outputMs-2").innerHTML = "";
         }
       }
 
       function generate() {
         var rand = Math.random();
-        rand *= 4;
+        rand *= 3;
         rand = Math.floor(rand);
         if (rand==0) {
-          rand = 1;
+          document.getElementById("key").value = getRanHex(16);
         }
-        document.getElementById("key").value = getRanHex(rand*16+16);
+        else if (rand==1) {
+          document.getElementById("key").value = getRanHex(24);
+        }
+        else if (rand==2) {
+          document.getElementById("key").value = getRanHex(32);
+        }
         input = document.getElementById("input").value;
         if (input.length != 0) {
           encrypt();

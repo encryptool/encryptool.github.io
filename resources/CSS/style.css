@@ -315,6 +315,42 @@ section#instructions {
 	padding: 0;
 }
 
+section#writeup {
+	height: auto;
+	width: 100vw;
+	padding: 10vh 25vw 20vh 25vw;
+	background: white;
+	color: black;
+	font-size: 18px;
+	font-weight: 200;
+}
+
+#writeup h1 {
+	font-size: 55px;
+	font-weight: 500;
+	color: #222;
+	font-family: monospace;
+	margin-bottom: 20px;
+}
+
+#writeup h2 {
+	font-size: 30px;
+	font-weight: 500;
+	color: #444;
+	font-family: sans-serif;
+	margin: 30px 0 10px 0;
+}
+
+#writeup img {
+	padding: 10px 10px 20px 0;
+}
+
+#writeup a {
+	color: blue;
+	font-size: 18px;
+	font-weight: 200;
+}
+
 #instructions a {
 	color: rgb(80,80,255);
 }
@@ -675,9 +711,18 @@ h1, h2, h3, h4, h5, h6,
 footer h1, footer h2, footer h3, footer h4, footer h5, footer h6 {
 	color: #fff;
 }
-h1, h2.text-light, footer h3, footer h4, footer h5, footer h6 {
-	color: #fff;
+
+#index-section-picture-2 h1 {
+	color: #ccc;
 }
+#index-section-picture-3 h1 {
+	color: #ccc;
+}
+#main.h1_big {
+	color: #444;
+}
+
+
 h1 {
 	font-size: 35px;
 	margin: 0;
@@ -771,9 +816,7 @@ h5.s2 {
 h5 {
 	font-weight: bold;
 }
-h1, h2, h3, h4, h5 {
-	color: #eceff3;
-}
+
 h4 {
 	margin: 10px 0 10px 0;
 	font-size: 18px;
